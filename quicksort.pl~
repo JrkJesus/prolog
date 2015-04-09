@@ -2,6 +2,20 @@
 	% Divide la lista en los menores que Piv (Men)
 	% Y los mayores que Piv (May)
 
+% quick(+Lista, -ListaR)
+	% ListaR unificara con lista cuando contenga
+	% los elementos de Lista de forma ordenada.
+
+
+
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+
+
+
+
 divide(_,[],[],[]).
 divide(P, [Cab | Resto], [Cab | Men], May):-
 	P=<Cab,
@@ -11,10 +25,6 @@ divide(P, [Cab | Resto], Men, [Cab | May]):-
 	divide(P,Resto,Men,May).
 
 
-
-% quick(+Lista, -ListaR)
-	% ListaR unificara con lista cuando contenga
-	% los elementos de Lista de forma ordenada.
 
 quick([],[]).
 quick([Cab | Resto], ListaR):-

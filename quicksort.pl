@@ -5,8 +5,7 @@
 % quick(+Lista, -ListaR)
 	% ListaR unificara con lista cuando contenga
 	% los elementos de Lista de forma ordenada.
-
-
+% -- %
 
 % --------------------------------------------------------------------
 % --------------------------------------------------------------------

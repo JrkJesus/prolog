@@ -7,6 +7,7 @@
 		% Es cierto cuando Lista unifica 
 		% con los numeros desde 1 hasta i 
 		% que dividen N.
+	% el modulo es "C is N mod M"
 
 % primo(+N)
 	% Devuelve true si N es primo.
@@ -39,6 +40,7 @@ divisores(N,Cont,[Cont | R]):-
 divisores(N,Cont,R):-
 	Cont>1,
 	C is N mod Cont,
+		% Importante donde se pone la condicion de arriba.
 	C \= 0,
 	Cont2 is Cont-1,
 	divisores(N,Cont2,R).
@@ -60,6 +62,7 @@ primos_entre_si(X,Y,[X|R]):-
 	X=<Y,
 	X2 is X+1,
 	primo(X),
+		% Importante donde se pone la condicion de arriba.
 	primos_entre_si(X2,Y,R).
 primos_entre_si(X,Y,R):-
 	X=<Y,
