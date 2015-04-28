@@ -51,3 +51,19 @@ recorrido_anchura( [ a(Etiq, nil, Dch) | Resto ], [ Etiq | ListaR ] ):-
 
 recorrido_anchura( [ a(Etiq, nil, nil) | R ], [ Etiq | ListaR ] ):-
 	recorrido_anchura(R, ListaR).
+
+
+
+
+
+anchura(a(Etiq, Izq, Dch), ListaR):-
+	anchura([a(Etiq, Izq, Dch)], ListaR).
+
+%recorrido_anchura([],[]).
+anchura([], []).
+anchura([nil | Resto ], ListaR):-
+	anchura(Resto, ListaR).
+
+anchura( [ a(Etiq, Izq, Dch) | Resto ], [ Etiq | ListaR ] ):-
+	append(Resto, [Izq, Dch ], R),
+	anchura(R, ListaR).
