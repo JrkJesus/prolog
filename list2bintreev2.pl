@@ -1,4 +1,4 @@
-% list2bintree(+Lista, ArbolBin)
+	% list2bintree(+Lista, ArbolBin)
 	% Es cierto cuando ArbolBin unifica con todos los
 	% elementos de Lista
 
