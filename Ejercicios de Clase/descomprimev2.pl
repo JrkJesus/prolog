@@ -1,7 +1,7 @@
 descomprimev2([], []).
 
 descomprimev2([Cab|Resto], [Cab|R]):-
-        atom(Cab),
+    atom(Cab),
 	descomprimev2(Resto,R).
 % atom te dice si es una estructura compleja (V cuando no lo es).
 

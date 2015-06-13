@@ -6,7 +6,6 @@
 
 permutav2([], []).
 permutav2(Lista, [E | R]):-
-	
 	append(L1, [E | L2], Lista),
 	append(L1, L2, Resto),
 	permutav2(Resto, R).
