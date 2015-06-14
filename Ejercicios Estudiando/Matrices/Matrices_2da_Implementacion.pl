@@ -63,7 +63,7 @@ sum_M_M(M1, M2, Nc, [Vsum | Msum]):-
 	append(Temp1, Resto1, M1),
 	append(Temp2, Resto2, M2),
 	sum_V_V(Temp1, Temp2, Vsum),
-	sum_M_M(Resto1, Resto2, Msum),
+	sum_M_M(Resto1, Resto2, Nc, Msum),
 sum_M_M([], [], _ , []).
 
 sum_V_V([Cab1 | Resto1], [Cab2 | Resto2], [Csum | Rsum]):-
@@ -84,12 +84,12 @@ res_M_M(M1, M2, Nc, [Vres | Mres]):-
 	append(Temp1, Resto1, M1),
 	append(Temp2, Resto2, M2),
 	res_V_V(Temp1, Temp2, Vres),
-	res_M_M(Resto1, Resto2, Mres),
+	res_M_M(Resto1, Resto2, Nc, Mres),
 res_M_M([], [], _ , []).
 
 res_V_V([Cab1 | Resto1], [Cab2 | Resto2], [Cres | Rres]):-
 	Cres is Cab1 + Cab2,
-	res_V_V(Resto1, Resto2, Rres.
+	res_V_V(Resto1, Resto2, Rres).
 res_V_V([], [], []).
 
 
